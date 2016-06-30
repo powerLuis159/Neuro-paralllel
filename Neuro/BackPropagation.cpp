@@ -28,7 +28,8 @@ BackPropagation::BackPropagation(Red &red)
 double BackPropagation::Entrenar(double ** entrada, double ** salida, int cuantasvueltas)
 {
 	double error = 0.0;
-#pragma omp parallel for
+#pragma omp parallel num_threads (4)
+#pragma omp for
 	for (int i = 0;i < cuantasvueltas;i++)
 	{
 		error += Correr(entrada[i], salida[i]);
