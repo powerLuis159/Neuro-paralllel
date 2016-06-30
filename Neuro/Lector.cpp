@@ -80,7 +80,7 @@ void Lector::Entrenar(BackPropagation &entrenador)
 		salida[i] = etiqueta;
 	}
 
-	entrenador.Entrenar(entrada, salida, 1000);//tiempo procesamiento 1min/1000 datos.
+	entrenador.Entrenar(entrada, salida, 2500);//tiempo procesamiento 1min/1000 datos.
 }
 
 void Lector::Probar(BackPropagation &entrenador)
